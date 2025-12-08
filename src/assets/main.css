@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Karla:wght@300;400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Karla', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-dark) 60%, var(--color-dark) 100%);
+  color: #fff;
+  position: relative;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  left: 10vw; top: 10vh;
+  width: 32vw; height: 32vw;
+  background: var(--color-primary);
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.25;
+  z-index: 0;
+  pointer-events: none;
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  left: 70vw; top: 60vh;
+  width: 24vw; height: 24vw;
+  background: var(--color-magenta);
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.18;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.floating-orb-global {
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.18;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.floating-orb-global.orb-1 {
+  left: 70vw; top: 60vh;
+  width: 24vw; height: 24vw;
+  background: var(--color-magenta);
+}
+.floating-orb-global.orb-2 {
+  left: 20vw; top: 80vh;
+  width: 18vw; height: 18vw;
+  background: var(--color-lavanda);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+#app {
+  width: 100%;
+}
