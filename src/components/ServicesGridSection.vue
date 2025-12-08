@@ -1,9 +1,20 @@
 <template>
-  <section class="py-32 relative overflow-hidden">
-    <!-- Carrusel infinito a ancho completo -->
-    <div class="relative w-full px-4">
-      <div class="flex animate-carousel gap-10">
-        <!-- Primera copia de las tarjetas -->
+  <section class="py-32 relative">
+    <div class="w-full overflow-hidden py-2">
+      <div 
+        ref="carousel"
+        class="flex gap-10 cursor-grab active:cursor-grabbing px-4 select-none"
+        :class="{ 'animate-carousel': !isDragging && !isHovering }"
+        @mousedown="startDrag"
+        @mousemove="onDrag"
+        @mouseup="endDrag"
+        @mouseleave="handleMouseLeave"
+        @mouseenter="isHovering = true"
+        @touchstart="startDrag"
+        @touchmove="onDrag"
+        @touchend="endDrag"
+        @dragstart.prevent
+      >
         <ServiceCard
           v-for="(service, index) in [...services, ...services]"
           :key="index"
@@ -18,7 +29,14 @@
 </template>
 
 <script setup>
-import ServiceCard from './ServiceCard.vue';
+import { ref } from 'vue'
+import ServiceCard from './ServiceCard.vue'
+
+const carousel = ref(null)
+const isDragging = ref(false)
+const isHovering = ref(false)
+const startX = ref(0)
+const scrollLeft = ref(0)
 
 const services = [
   { name: 'Marketing Digital', icon: 'marketing', description: 'Estrategias para aumentar tu presencia online y visibilidad.' },
@@ -28,14 +46,42 @@ const services = [
   { name: 'Estrategia Web', icon: 'estrategia', description: 'Planificación y consultoría para tu presencia digital.' },
   { name: 'Analítica & Métricas', icon: 'analitica', description: 'Medición de resultados y mejora continua de tu presencia.' }
 ]
+
+const startDrag = (e) => {
+  isDragging.value = true
+  const pageX = e.type.includes('mouse') ? e.pageX : e.touches[0].pageX
+  startX.value = pageX - carousel.value.offsetLeft
+  scrollLeft.value = carousel.value.scrollLeft
+}
+
+const onDrag = (e) => {
+  if (!isDragging.value) return
+  e.preventDefault()
+}
+
+const endDrag = () => {
+  isDragging.value = false
+}
+
+const handleMouseLeave = () => {
+  isDragging.value = false
+  isHovering.value = false
+}
 </script>
 
 <style scoped>
-/* Glassmorphism effect for cards */
-.bg-glass {
-  background: rgba(30, 22, 92, 0.7);
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(195, 184, 255, 0.12);
+.select-none {
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 @keyframes carousel {
@@ -48,10 +94,12 @@ const services = [
 }
 
 .animate-carousel {
-  animation: carousel 25s linear infinite;
+  animation: carousel 40s linear infinite;
 }
 
-.animate-carousel:hover {
-  animation-play-state: paused;
+.bg-glass {
+  background: rgba(30, 22, 92, 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(195, 184, 255, 0.12);
 }
 </style>

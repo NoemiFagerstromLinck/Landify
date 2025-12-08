@@ -38,24 +38,23 @@
 
     <div class="container mx-auto px-8 md:px-12 lg:px-16 relative z-10">
       <div class="max-w-6xl mx-auto text-center space-y-8">
-        <!-- Badge -->
         <div class="inline-block animate-fade-in-down">
           <span class="px-6 py-3 bg-white/5 text-white rounded-full text-sm font-light border border-white/20 backdrop-blur-sm inline-flex items-center gap-2">
             <span class="w-2 h-2 bg-white rounded-full animate-pulse"></span>
-            Tu Agencia de Presencia Digital
+            AGENCIA DIGITAL PARA PYMES EN CHILE
           </span>
         </div>
         
         <h1 class="text-5xl md:text-6xl lg:text-7xl font-light leading-[1.2] animate-fade-in-up">
-          <span class="text-white">Llevamos tu marca </span>
+          <span class="text-white">LLEVAMOS TU MARCA </span>
           <span class="bg-gradient-to-r from-primary via-magenta to-lavanda bg-clip-text text-transparent animate-gradient">
-            al mundo digital
+            AL MUNDO DIGITAL
           </span>
         </h1>
         
         <p class="text-lg md:text-xl text-gray-400 leading-relaxed max-w-4xl mx-auto font-light animate-fade-in">
-          Creamos tu <span class="text-primary font-normal">sitio web</span> profesional y fácil de mostrar.
-          <span class="block mt-2 text-base">Shopify · Jumpseller · WordPress · Código Custom</span>
+          Creamos tu <span class="text-primary font-normal">tienda online</span> o sitio web profesional para PyMEs en Chile.
+          <span class="block mt-2 text-base">Shopify · Jumpseller · WordPress · Desarrollo Personalizado</span>
         </p>
 
 
@@ -68,14 +67,6 @@
               </svg>
             </span>
             <div class="absolute inset-0 bg-gradient-to-r from-magenta to-primary opacity-0 group-hover:opacity-100 transition-opacity"></div>
-          </button>
-          
-          <button class="group px-10 py-5 rounded-full text-base font-normal border border-primary/30 hover:border-primary transition-all duration-300 hover:bg-primary/10 backdrop-blur-sm flex items-center gap-2">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-            </svg>
-            VER PROYECTOS
           </button>
         </div>
 
