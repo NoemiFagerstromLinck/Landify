@@ -1,18 +1,15 @@
 <template>
-  <section class="py-32 relative">
-    <div class="w-full overflow-hidden py-2">
+  <section class="py-20 md:py-32 relative">
+    <div class="w-full overflow-x-auto overflow-y-hidden scrollbar-hide md:overflow-hidden py-2">
       <div 
         ref="carousel"
-        class="flex gap-10 cursor-grab active:cursor-grabbing px-4 select-none"
-        :class="{ 'animate-carousel': !isDragging && !isHovering }"
+        class="flex gap-6 md:gap-10 px-4 select-none"
+        :class="{ 'md:animate-carousel': !isDragging && !isHovering }"
         @mousedown="startDrag"
         @mousemove="onDrag"
         @mouseup="endDrag"
         @mouseleave="handleMouseLeave"
         @mouseenter="isHovering = true"
-        @touchstart="startDrag"
-        @touchmove="onDrag"
-        @touchend="endDrag"
         @dragstart.prevent
       >
         <ServiceCard
@@ -21,7 +18,7 @@
           :icon="service.icon"
           :title="service.name"
           :subtitle="service.description"
-          class="flex-shrink-0 w-[380px]"
+          class="flex-shrink-0 w-64 md:w-[380px]"
         />
       </div>
     </div>
@@ -48,6 +45,7 @@ const services = [
 ]
 
 const startDrag = (e) => {
+  if (window.innerWidth < 768) return // Deshabilitar drag en mobile, usar scroll nativo
   isDragging.value = true
   const pageX = e.type.includes('mouse') ? e.pageX : e.touches[0].pageX
   startX.value = pageX - carousel.value.offsetLeft
@@ -55,8 +53,12 @@ const startDrag = (e) => {
 }
 
 const onDrag = (e) => {
-  if (!isDragging.value) return
+  if (!isDragging.value || window.innerWidth < 768) return
   e.preventDefault()
+  const pageX = e.type.includes('mouse') ? e.pageX : e.touches[0].pageX
+  const x = pageX - carousel.value.offsetLeft
+  const walk = (x - startX.value) * 2
+  carousel.value.scrollLeft = scrollLeft.value - walk
 }
 
 const endDrag = () => {

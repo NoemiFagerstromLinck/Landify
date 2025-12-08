@@ -1,38 +1,55 @@
-# .
+# Landify 💜
 
-This template should help get you started developing with Vue 3 in Vite.
+Sitio web de Landify, una agencia digital chilena especializada en desarrollo web para PyMEs. Aquí ayudamos a pequeñas y medianas empresas a tener su presencia online con tiendas eCommerce, landing pages y sitios personalizados.
 
-## Recommended IDE Setup
+## 🚀 ¿Qué hace este proyecto?
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+Este es el sitio web oficial de Landify donde mostramos nuestros servicios:
+- Tiendas online en **Shopify** (para vender a nivel mundial)
+- Tiendas en **Jumpseller** (perfecto para el mercado chileno con Transbank)
+- Landing pages y blogs en **WordPress**
+- Desarrollo web personalizado con código a medida
 
-## Recommended Browser Setup
+Además tiene un blog con artículos útiles sobre eCommerce, SEO, comparativas de plataformas y más.
 
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd) 
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
+## 🛠️ Tecnologías
 
-## Customize configuration
+El proyecto está hecho con:
+- **Vue.js 3** - Framework principal
+- **Vite** - Para desarrollo súper rápido
+- **Tailwind CSS** - Para los estilos
+- **Vue Router** - Para las rutas del sitio
+- **GitHub Pages** - Donde está desplegado
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+## 📦 Cómo usarlo
 
-## Project Setup
+Si quieres correr el proyecto en tu compu:
 
 ```sh
+# Instalar dependencias
 npm install
-```
 
-### Compile and Hot-Reload for Development
-
-```sh
+# Correr en desarrollo (se abre en http://localhost:5173)
 npm run dev
-```
 
-### Compile and Minify for Production
-
-```sh
+# Hacer build para producción
 npm run build
+
+# Desplegar a GitHub Pages
+npm run deploy
 ```
+
+## 🌐 Ver el sitio
+
+El sitio está live en: **[www.landify.cl](https://www.landify.cl)**
+
+## 📱 Redes
+
+Instagram: [@landify.cl](https://www.instagram.com/landify.cl)
+
+WhatsApp: +56 9 5219 0811
+
+---
+
+Hecho con 💜 en Chile
+

@@ -1,8 +1,8 @@
 <!-- Sección de blog con grid de 6 artículos sobre eCommerce y desarrollo web -->
 <template>
-  <section id="blog" class="py-32 relative overflow-hidden">
+  <section id="blog" class="py-16 md:py-32 relative overflow-hidden">
     <div class="container mx-auto px-8 md:px-12 lg:px-16 relative z-10">
-      <div class="text-center mb-20">
+      <div class="text-center mb-12 md:mb-20">
         <span class="inline-block px-4 py-2 bg-white/5 text-lavanda rounded-full text-sm font-light border border-lavanda/30 mb-6 tracking-wide backdrop-blur-sm">
           Blog
         </span>
@@ -17,7 +17,7 @@
         </p>
       </div>
 
-      <div class="max-w-7xl mx-auto overflow-hidden">
+      <div class="max-w-7xl mx-auto overflow-hidden relative">
         <div class="flex overflow-x-auto md:grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 pb-4 md:pb-0 snap-x snap-mandatory scrollbar-hide">
           <!-- Artículo 1: Shopify -->
           <router-link 
@@ -210,6 +210,16 @@
               </div>
             </div>
           </router-link>
+        </div>
+        
+        <!-- Indicadores de scroll para móvil -->
+        <div class="flex justify-center gap-2 mt-6 md:hidden">
+          <div class="w-2 h-2 rounded-full bg-primary"></div>
+          <div class="w-2 h-2 rounded-full bg-white/20"></div>
+          <div class="w-2 h-2 rounded-full bg-white/20"></div>
+          <div class="w-2 h-2 rounded-full bg-white/20"></div>
+          <div class="w-2 h-2 rounded-full bg-white/20"></div>
+          <div class="w-2 h-2 rounded-full bg-white/20"></div>
         </div>
       </div>
     </div>
