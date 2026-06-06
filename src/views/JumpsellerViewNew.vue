@@ -1,380 +1,186 @@
-<!-- Página de servicio Jumpseller enfocada en el mercado chileno -->
 <template>
-  <div class="min-h-screen relative overflow-hidden">
-    <MouseParticles />
-    <div class="fixed inset-0" style="z-index: -10;">
-      <div class="absolute inset-0 bg-gradient-to-br from-primary-dark via-dark to-dark"></div>
-      <div class="grid-background"></div>
-      
-      <!-- Particles -->
-      <div class="particles-container">
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-      </div>
-      
-      <!-- Floating Orbs -->
-      <div class="absolute inset-0 opacity-30">
-        <div class="floating-orb orb-1 w-96 h-96 bg-primary rounded-full blur-3xl"></div>
-        <div class="floating-orb orb-2 w-80 h-80 bg-magenta rounded-full blur-3xl"></div>
-        <div class="floating-orb orb-3 w-72 h-72 bg-lavanda rounded-full blur-3xl"></div>
-      </div>
-    </div>
-
+  <div class="bg-ink min-h-screen">
     <HeaderNav />
-    
-    <!-- Hero Section -->
-    <section class="relative pt-40 pb-20">
-      <div class="container mx-auto px-8 md:px-12 lg:px-16 relative z-10">
+
+    <section class="pt-44 pb-20 md:pt-52 md:pb-32">
+      <div class="container mx-auto px-8 md:px-12 lg:px-16">
         <div class="max-w-4xl">
-          <div class="inline-block mb-6">
-            <span class="px-6 py-3 bg-white/5 text-white rounded-full text-sm font-light border border-white/20 backdrop-blur-sm inline-flex items-center gap-2">
-              <span class="w-2 h-2 bg-primary rounded-full animate-pulse"></span>
-              🇨🇱 Hecha en Chile para Chile
-            </span>
-          </div>
-          
-          <h1 class="text-5xl md:text-6xl lg:text-7xl font-light mb-6">
-            Tiendas <span class="bg-gradient-to-r from-primary via-magenta to-lavanda bg-clip-text text-transparent">Jumpseller</span>
+          <span class="text-xs tracking-[0.2em] text-paper-muted font-body uppercase mb-6 block">Hecho en Chile &mdash; Jumpseller</span>
+          <h1 class="text-5xl md:text-7xl lg:text-8xl font-display font-bold text-paper leading-[0.95] mb-8">
+            Tiendas<br>
+            <span class="italic text-crimson">Jumpseller</span>
           </h1>
-          
-          <p class="text-xl text-gray-400 leading-relaxed mb-8 font-light">
-            La plataforma eCommerce chilena que entiende tu negocio local. Simplicidad, Transbank nativo y precios en pesos sin comisiones por venta.
+          <p class="text-lg md:text-xl text-paper-muted font-body font-light max-w-2xl leading-relaxed mb-10">
+            La plataforma eCommerce chilena que entiende tu negocio local. Transbank nativo, precios en pesos y sin comisiones por venta.
           </p>
-
-          <div class="flex flex-wrap gap-4">
-            <button class="bg-gradient-to-r from-primary to-magenta hover:from-magenta hover:to-primary text-white px-8 py-4 rounded-full font-normal transition-all hover:scale-105">
-              Cotizar proyecto
-            </button>
-          </div>
+          <a href="https://wa.me/56952190811" target="_blank" class="inline-block bg-crimson text-paper px-10 py-4 text-sm tracking-widest font-body uppercase hover:bg-white hover:text-ink transition-all duration-300">
+            Cotizar proyecto
+          </a>
         </div>
       </div>
     </section>
 
-    <!-- Pros y Contras -->
-    <section class="py-20 relative">
-      <div class="container mx-auto px-8 md:px-12 lg:px-16">
-        <div class="text-center mb-16">
-          <h2 class="text-4xl md:text-5xl font-light mb-4">¿Es Jumpseller adecuado para ti?</h2>
-          <p class="text-lg text-gray-400 font-light">Ventajas y consideraciones importantes</p>
-        </div>
-
-        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-8">
-          <!-- Pros -->
-          <div class="bg-gradient-to-br from-gray-900/40 to-gray-800/40 backdrop-blur-sm rounded-3xl p-8 border border-white/10">
-            <div class="flex items-center gap-3 mb-6">
-              <div class="w-12 h-12 rounded-full bg-gradient-to-r from-primary to-magenta flex items-center justify-center">
-                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                </svg>
-              </div>
-              <h3 class="text-2xl font-light text-white">Ventajas</h3>
-            </div>
-            
-            <ul class="space-y-4">
-              <li class="flex items-start gap-3">
-                <svg class="w-6 h-6 text-primary flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                </svg>
-                <div>
-                  <p class="text-white font-normal mb-2 text-lg">Transbank nativo</p>
-                  <p class="text-gray-300 text-base font-light">Integración directa con Webpay Plus sin apps de terceros</p>
-                </div>
-              </li>
-              <li class="flex items-start gap-3">
-                <svg class="w-6 h-6 text-primary flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                </svg>
-                <div>
-                  <p class="text-white font-normal mb-2 text-lg">Sin comisiones por venta</p>
-                  <p class="text-gray-300 text-base font-light">Pagas una mensualidad fija en pesos, sin % por transacción</p>
-                </div>
-              </li>
-              <li class="flex items-start gap-3">
-                <svg class="w-6 h-6 text-primary flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                </svg>
-                <div>
-                  <p class="text-white font-normal mb-2 text-lg">Precios competitivos</p>
-                  <p class="text-gray-300 text-base font-light">Desde $14.990/mes, más accesible para negocios pequeños</p>
-                </div>
-              </li>
-              <li class="flex items-start gap-3">
-                <svg class="w-6 h-6 text-primary flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                </svg>
-                <div>
-                  <p class="text-white font-normal mb-2 text-lg">Soporte local</p>
-                  <p class="text-gray-300 text-base font-light">Atención en español y horario chileno</p>
-                </div>
-              </li>
-              <li class="flex items-start gap-3">
-                <svg class="w-6 h-6 text-primary flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                </svg>
-                <div>
-                  <p class="text-white font-normal mb-2 text-lg">Fácil de usar</p>
-                  <p class="text-gray-300 text-base font-light">Interfaz intuitiva, ideal para emprendedores sin conocimiento técnico</p>
-                </div>
-              </li>
-            </ul>
-          </div>
-
-          <!-- Contras -->
-          <div class="bg-gradient-to-br from-gray-900/40 to-gray-800/40 backdrop-blur-sm rounded-3xl p-8 border border-white/10">
-            <div class="flex items-center gap-3 mb-6">
-              <div class="w-12 h-12 rounded-full bg-gradient-to-r from-magenta to-lavanda flex items-center justify-center">
-                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
-                </svg>
-              </div>
-              <h3 class="text-2xl font-light text-white">Consideraciones</h3>
-            </div>
-            
-            <ul class="space-y-4">
-              <li class="flex items-start gap-3">
-                <svg class="w-6 h-6 text-magenta flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-                <div>
-                  <p class="text-white font-normal mb-2 text-lg">Menos apps disponibles</p>
-                  <p class="text-gray-300 text-base font-light">Catálogo de integraciones más limitado vs Shopify</p>
-                </div>
-              </li>
-              <li class="flex items-start gap-3">
-                <svg class="w-6 h-6 text-magenta flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-                <div>
-                  <p class="text-white font-normal mb-2 text-lg">Escalabilidad limitada</p>
-                  <p class="text-gray-300 text-base font-light">Mejor para catálogos de hasta 500-1000 productos</p>
-                </div>
-              </li>
-              <li class="flex items-start gap-3">
-                <svg class="w-6 h-6 text-magenta flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-                <div>
-                  <p class="text-white font-normal mb-2 text-lg">Enfocado en Latinoamérica</p>
-                  <p class="text-gray-300 text-base font-light">Si planeas vender globalmente, Shopify es mejor opción</p>
-                </div>
-              </li>
-              <li class="flex items-start gap-3">
-                <svg class="w-6 h-6 text-magenta flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-                <div>
-                  <p class="text-white font-normal mb-2 text-lg">Personalización básica</p>
-                  <p class="text-gray-300 text-base font-light">Aunque tiene acceso al código, opciones más limitadas que Shopify</p>
-                </div>
-              </li>
-              <li class="flex items-start gap-3">
-                <svg class="w-6 h-6 text-magenta flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-                <div>
-                  <p class="text-white font-normal mb-2 text-lg">Comunidad más pequeña</p>
-                  <p class="text-gray-300 text-base font-light">Menos recursos online, tutoriales y desarrolladores especializados</p>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- Conclusión -->
-        <div class="max-w-4xl mx-auto mt-12 text-center">
-          <p class="text-gray-300 text-lg font-light leading-relaxed">
-            💡 <span class="text-white font-normal">Recomendamos Jumpseller si:</span> Tu negocio es 100% local en Chile, buscas simplicidad y costos predecibles, o necesitas Transbank sin complicaciones. Para venta internacional o catálogos grandes, considera <a href="/servicios/shopify" class="text-primary hover:text-magenta transition-colors">Shopify</a>.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Cómo funciona - Sección con videos/imágenes -->
-    <section class="py-20 relative">
-      <div class="container mx-auto px-8 md:px-12 lg:px-16">
-        <div class="text-center mb-16">
-          <h2 class="text-4xl md:text-5xl font-light mb-4">¿Cómo creamos tu tienda Jumpseller?</h2>
-          <p class="text-lg text-gray-400 font-light">Proceso paso a paso para lanzar tu negocio online</p>
-        </div>
-
-        <!-- Paso 1 -->
-        <div class="max-w-6xl mx-auto mb-20">
-          <div class="grid md:grid-cols-2 gap-12 items-center">
-            <div class="order-2 md:order-1">
-              <div class="inline-block px-5 py-2 bg-primary/20 text-white rounded-full text-base font-normal mb-4 border border-primary/30">
-                Paso 1
-              </div>
-              <h3 class="text-4xl md:text-5xl font-light mb-6">Configuración inicial</h3>
-              <p class="text-xl text-gray-300 leading-relaxed font-light mb-8">
-                Creamos tu cuenta Jumpseller, configuramos el plan adecuado y establecemos la estructura de tu tienda. Conectamos dominio, Transbank/Webpay y opciones de envío.
-              </p>
-              <ul class="space-y-4">
-                <li class="flex items-start text-gray-300">
-                  <svg class="w-6 h-6 text-primary mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span class="font-light text-lg">Selección y activación del plan</span>
-                </li>
-                <li class="flex items-start text-gray-300">
-                  <svg class="w-6 h-6 text-primary mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span class="font-light text-lg">Integración de Transbank/Webpay Plus</span>
-                </li>
-                <li class="flex items-start text-gray-300">
-                  <svg class="w-6 h-6 text-primary mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span class="font-light text-lg">Configuración de dominio personalizado</span>
-                </li>
-              </ul>
-            </div>
-            <div class="order-1 md:order-2">
-              <div class="aspect-video rounded-2xl bg-gradient-to-br from-primary/20 to-magenta/20 backdrop-blur-sm border border-white/10 flex items-center justify-center overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=450&fit=crop" alt="Configuración Jumpseller" class="w-full h-full object-cover" />
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Paso 2 -->
-        <div class="max-w-6xl mx-auto mb-20">
-          <div class="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <div class="aspect-video rounded-2xl bg-gradient-to-br from-magenta/20 to-lavanda/20 backdrop-blur-sm border border-white/10 flex items-center justify-center overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1559028012-481c04fa702d?w=800&h=450&fit=crop" alt="Diseño personalizado" class="w-full h-full object-cover" />
-              </div>
-            </div>
-            <div>
-              <div class="inline-block px-5 py-2 bg-magenta/20 text-white rounded-full text-base font-normal mb-4 border border-magenta/30">
-                Paso 2
-              </div>
-              <h3 class="text-4xl md:text-5xl font-light mb-6">Diseño y personalización</h3>
-              <p class="text-xl text-gray-300 leading-relaxed font-light mb-8">
-                Elegimos un tema que se ajuste a tu marca y lo personalizamos. Ajustamos colores, tipografías, logos y creamos páginas específicas para tu negocio.
-              </p>
-              <ul class="space-y-4">
-                <li class="flex items-start text-gray-300">
-                  <svg class="w-6 h-6 text-magenta mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span class="font-light text-lg">Selección y personalización de tema</span>
-                </li>
-                <li class="flex items-start text-gray-300">
-                  <svg class="w-6 h-6 text-magenta mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span class="font-light text-lg">Diseño responsive para móviles</span>
-                </li>
-                <li class="flex items-start text-gray-300">
-                  <svg class="w-6 h-6 text-magenta mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span class="font-light text-lg">Integración de identidad visual</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <!-- Paso 3 -->
-        <div class="max-w-6xl mx-auto">
-          <div class="grid md:grid-cols-2 gap-12 items-center">
-            <div class="order-2 md:order-1">
-              <div class="inline-block px-5 py-2 bg-lavanda/20 text-white rounded-full text-base font-normal mb-4 border border-lavanda/30">
-                Paso 3
-              </div>
-              <h3 class="text-4xl md:text-5xl font-light mb-6">Carga de productos y lanzamiento</h3>
-              <p class="text-xl text-gray-300 leading-relaxed font-light mb-8">
-                Subimos tus productos con descripciones optimizadas e imágenes profesionales. Realizamos pruebas de compra y lanzamos tu tienda al público.
-              </p>
-              <ul class="space-y-4">
-                <li class="flex items-start text-gray-300">
-                  <svg class="w-6 h-6 text-lavanda mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span class="font-light text-lg">Optimización de fichas de producto</span>
-                </li>
-                <li class="flex items-start text-gray-300">
-                  <svg class="w-6 h-6 text-lavanda mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span class="font-light text-lg">Testing completo del checkout</span>
-                </li>
-                <li class="flex items-start text-gray-300">
-                  <svg class="w-6 h-6 text-lavanda mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span class="font-light text-lg">Capacitación para administrar tu tienda</span>
-                </li>
-              </ul>
-            </div>
-            <div class="order-1 md:order-2">
-              <div class="aspect-video rounded-2xl bg-gradient-to-br from-lavanda/20 to-primary/20 backdrop-blur-sm border border-white/10 flex items-center justify-center overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=800&h=450&fit=crop" alt="Lanzamiento" class="w-full h-full object-cover" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CTA Final -->
-    <section class="py-32 relative">
+    <section class="py-20 md:py-32 border-t border-white/5">
       <div class="container mx-auto px-8 md:px-12 lg:px-16">
         <div class="max-w-5xl mx-auto">
-          <div 
-            class="relative overflow-hidden rounded-3xl group cursor-pointer cta-hover-container"
-            @mousemove="handleMouseMove"
-            @mouseleave="handleMouseLeave"
-          >
-            <!-- Imagen de fondo -->
-            <div class="absolute inset-0">
-              <img 
-                ref="ctaImage"
-                src="https://images.unsplash.com/photo-1557804506-669a67965ba0?w=1200&h=600&fit=crop" 
-                alt="Team collaboration" 
-                class="w-full h-full object-cover cta-image"
-                :style="imageStyle"
-              />
-              <div class="absolute inset-0 bg-gradient-to-r from-primary/90 via-magenta/80 to-primary/90 transition-all duration-500 group-hover:from-primary/85 group-hover:via-magenta/75 group-hover:to-primary/85"></div>
+          <div class="mb-16">
+            <span class="text-xs tracking-[0.2em] text-paper-muted font-body uppercase mb-4 block">Análisis</span>
+            <h2 class="text-3xl md:text-5xl font-display font-bold text-paper leading-[1.1]">¿Es Jumpseller para ti?</h2>
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-16">
+            <div>
+              <h3 class="text-lg font-display font-semibold text-paper mb-8 border-b border-white/5 pb-4">Ventajas</h3>
+              <ul class="space-y-8">
+                <li>
+                  <p class="text-base font-display font-semibold text-paper mb-1">Transbank nativo</p>
+                  <p class="text-sm text-paper-muted font-body">Integración directa con Webpay Plus sin apps de terceros. Listo para vender en Chile desde el día uno.</p>
+                </li>
+                <li>
+                  <p class="text-base font-display font-semibold text-paper mb-1">Sin comisiones por venta</p>
+                  <p class="text-sm text-paper-muted font-body">Pagas una mensualidad fija en pesos chilenos. Sin sorpresas ni porcentajes por transacción.</p>
+                </li>
+                <li>
+                  <p class="text-base font-display font-semibold text-paper mb-1">Precios competitivos</p>
+                  <p class="text-sm text-paper-muted font-body">Desde $14.990/mes. Más accesible para PyMEs y emprendedores que están comenzando.</p>
+                </li>
+                <li>
+                  <p class="text-base font-display font-semibold text-paper mb-1">Soporte local</p>
+                  <p class="text-sm text-paper-muted font-body">Atención en español y horario chileno. Resolución rápida sin barreras de idioma ni huso horario.</p>
+                </li>
+              </ul>
             </div>
-            
-            <!-- Contenido -->
-            <div class="relative z-10 px-8 md:px-16 py-20 text-center">
-              <h2 class="text-5xl md:text-6xl lg:text-7xl font-normal mb-8 text-white drop-shadow-lg">
-                ¿Listo para vender online con Jumpseller?
-              </h2>
-              <p class="text-2xl md:text-3xl text-white mb-12 max-w-3xl mx-auto font-light drop-shadow-md">
-                Contáctanos y recibe una cotización personalizada para tu tienda
-              </p>
-              <div class="flex flex-col sm:flex-row gap-6 justify-center">
-                <button class="bg-white text-primary px-12 py-6 rounded-full text-xl font-semibold hover:scale-105 transition-all hover:shadow-2xl">
-                  Iniciar mi proyecto
-                </button>
-                <button class="px-12 py-6 rounded-full text-xl font-normal border-2 border-white text-white hover:bg-white hover:text-primary transition-all">
-                  Agendar reunión
-                </button>
+
+            <div>
+              <h3 class="text-lg font-display font-semibold text-paper mb-8 border-b border-white/5 pb-4">Consideraciones</h3>
+              <ul class="space-y-8">
+                <li>
+                  <p class="text-base font-display font-semibold text-paper mb-1">Catálogo de apps limitado</p>
+                  <p class="text-sm text-paper-muted font-body">Menos integraciones disponibles comparado con Shopify. Suficiente para la mayoría de los negocios locales.</p>
+                </li>
+                <li>
+                  <p class="text-base font-display font-semibold text-paper mb-1">Escalabilidad media</p>
+                  <p class="text-sm text-paper-muted font-body">Óptimo para catálogos de hasta 500-1000 productos. Para catálogos masivos, Shopify es más adecuado.</p>
+                </li>
+                <li>
+                  <p class="text-base font-display font-semibold text-paper mb-1">Enfoque latinoamericano</p>
+                  <p class="text-sm text-paper-muted font-body">Si planeas vender globalmente desde el inicio, considera Shopify como alternativa.</p>
+                </li>
+                <li>
+                  <p class="text-base font-display font-semibold text-paper mb-1">Personalización acotada</p>
+                  <p class="text-sm text-paper-muted font-body">Tiene acceso al código pero las opciones de personalización son más limitadas que Shopify.</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="mt-16 p-8 md:p-12 bg-charcoal border border-white/5">
+            <p class="text-sm text-paper-muted font-body leading-relaxed">
+              <span class="text-crimson font-semibold">&mdash;</span> Recomendamos Jumpseller si tu negocio es 100% local en Chile, buscas simplicidad y costos predecibles. Para venta internacional o catálogos grandes, considera <router-link to="/servicios/shopify" class="text-paper underline hover:text-crimson transition-colors">Shopify</router-link>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 md:py-32 border-t border-white/5">
+      <div class="container mx-auto px-8 md:px-12 lg:px-16">
+        <div class="max-w-5xl mx-auto">
+          <span class="text-xs tracking-[0.2em] text-paper-muted font-body uppercase mb-4 block">Proceso</span>
+          <h2 class="text-3xl md:text-5xl font-display font-bold text-paper leading-[1.1] mb-16">Cómo creamos tu tienda</h2>
+
+          <div class="space-y-16">
+            <div class="grid md:grid-cols-5 gap-8 items-start">
+              <div class="md:col-span-1">
+                <span class="text-6xl font-display font-bold text-paper-muted/10">01</span>
+              </div>
+              <div class="md:col-span-4">
+                <h3 class="text-2xl font-display font-bold text-paper mb-3">Configuración inicial</h3>
+                <p class="text-sm text-paper-muted font-body leading-relaxed mb-6">Creamos tu cuenta Jumpseller, configuramos el plan y establecemos la estructura de tu tienda. Conectamos dominio, Transbank y envíos.</p>
+                <ul class="space-y-2">
+                  <li class="text-sm text-paper-muted font-body flex items-start gap-3">
+                    <span class="text-crimson mt-0.5">&mdash;</span>
+                    <span>Selección y activación del plan</span>
+                  </li>
+                  <li class="text-sm text-paper-muted font-body flex items-start gap-3">
+                    <span class="text-crimson mt-0.5">&mdash;</span>
+                    <span>Integración de Transbank/Webpay Plus</span>
+                  </li>
+                  <li class="text-sm text-paper-muted font-body flex items-start gap-3">
+                    <span class="text-crimson mt-0.5">&mdash;</span>
+                    <span>Configuración de dominio personalizado</span>
+                  </li>
+                </ul>
               </div>
             </div>
+
+            <div class="grid md:grid-cols-5 gap-8 items-start">
+              <div class="md:col-span-1">
+                <span class="text-6xl font-display font-bold text-paper-muted/10">02</span>
+              </div>
+              <div class="md:col-span-4">
+                <h3 class="text-2xl font-display font-bold text-paper mb-3">Diseño y personalización</h3>
+                <p class="text-sm text-paper-muted font-body leading-relaxed mb-6">Elegimos y personalizamos un tema que refleje tu marca, con colores, tipografías y páginas adaptadas a tu negocio.</p>
+                <ul class="space-y-2">
+                  <li class="text-sm text-paper-muted font-body flex items-start gap-3">
+                    <span class="text-crimson mt-0.5">&mdash;</span>
+                    <span>Personalización completa del tema</span>
+                  </li>
+                  <li class="text-sm text-paper-muted font-body flex items-start gap-3">
+                    <span class="text-crimson mt-0.5">&mdash;</span>
+                    <span>Diseño responsive</span>
+                  </li>
+                  <li class="text-sm text-paper-muted font-body flex items-start gap-3">
+                    <span class="text-crimson mt-0.5">&mdash;</span>
+                    <span>Integración de identidad visual</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="grid md:grid-cols-5 gap-8 items-start">
+              <div class="md:col-span-1">
+                <span class="text-6xl font-display font-bold text-paper-muted/10">03</span>
+              </div>
+              <div class="md:col-span-4">
+                <h3 class="text-2xl font-display font-bold text-paper mb-3">Lanzamiento</h3>
+                <p class="text-sm text-paper-muted font-body leading-relaxed mb-6">Subimos tus productos, probamos todo el flujo de compra y lanzamos. Te capacitamos para administrar tu tienda sin ayuda técnica.</p>
+                <ul class="space-y-2">
+                  <li class="text-sm text-paper-muted font-body flex items-start gap-3">
+                    <span class="text-crimson mt-0.5">&mdash;</span>
+                    <span>Carga y optimización de productos</span>
+                  </li>
+                  <li class="text-sm text-paper-muted font-body flex items-start gap-3">
+                    <span class="text-crimson mt-0.5">&mdash;</span>
+                    <span>Testing completo del checkout</span>
+                  </li>
+                  <li class="text-sm text-paper-muted font-body flex items-start gap-3">
+                    <span class="text-crimson mt-0.5">&mdash;</span>
+                    <span>Capacitación para administrar tu tienda</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-32 md:py-44 border-t border-white/5">
+      <div class="container mx-auto px-8 md:px-12 lg:px-16">
+        <div class="max-w-3xl mx-auto text-center">
+          <h2 class="text-4xl md:text-6xl font-display font-bold text-paper leading-[1.05] mb-8">
+            ¿Listo para vender<br>
+            <span class="italic text-crimson">con Jumpseller?</span>
+          </h2>
+          <p class="text-base text-paper-muted font-body mb-12 max-w-xl mx-auto">Conversemos sobre tu proyecto y te entregamos una cotización personalizada.</p>
+          <div class="flex flex-col sm:flex-row gap-6 justify-center">
+            <a href="https://wa.me/56952190811" target="_blank" class="bg-crimson text-paper px-10 py-4 text-sm tracking-widest font-body uppercase hover:bg-white hover:text-ink transition-all duration-300">
+              Iniciar mi proyecto
+            </a>
+            <a href="https://wa.me/56952190811" target="_blank" class="border border-white/20 text-paper px-10 py-4 text-sm tracking-widest font-body uppercase hover:bg-white hover:text-ink hover:border-white transition-all duration-300">
+              Agendar reunión
+            </a>
           </div>
         </div>
       </div>
@@ -386,162 +192,7 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
-import MouseParticles from '../components/MouseParticles.vue'
 import HeaderNav from '../components/HeaderNav.vue'
 import FooterSection from '../components/FooterSection.vue'
 import WhatsAppButton from '../components/WhatsAppButton.vue'
-
-const ctaImage = ref(null)
-const imageStyle = ref({
-  transform: 'scale(1.1) translate(0px, 0px)',
-  transition: 'transform 0.3s ease-out'
-})
-
-const handleMouseMove = (e) => {
-  const rect = e.currentTarget.getBoundingClientRect()
-  const x = e.clientX - rect.left
-  const y = e.clientY - rect.top
-  
-  const centerX = rect.width / 2
-  const centerY = rect.height / 2
-  
-  const moveX = (x - centerX) / centerX * 15
-  const moveY = (y - centerY) / centerY * 15
-  
-  imageStyle.value = {
-    transform: `scale(1.15) translate(${moveX}px, ${moveY}px)`,
-    transition: 'transform 0.3s ease-out'
-  }
-}
-
-const handleMouseLeave = () => {
-  imageStyle.value = {
-    transform: 'scale(1.1) translate(0px, 0px)',
-    transition: 'transform 0.6s ease-out'
-  }
-}
 </script>
-
-<style scoped>
-/* Particles */
-.particles-container {
-  position: absolute;
-  inset: 0;
-  overflow: hidden;
-  pointer-events: none;
-}
-
-.particle {
-  position: absolute;
-  width: 4px;
-  height: 4px;
-  background: #6B4EFF;
-  border-radius: 50%;
-  opacity: 0;
-  animation: particleFloat 15s infinite;
-  box-shadow: 0 0 10px #6B4EFF;
-}
-
-.particle:nth-child(1) { left: 10%; animation-delay: 0s; }
-.particle:nth-child(2) { left: 20%; animation-delay: 2s; }
-.particle:nth-child(3) { left: 30%; animation-delay: 4s; }
-.particle:nth-child(4) { left: 40%; animation-delay: 1s; }
-.particle:nth-child(5) { left: 50%; animation-delay: 3s; }
-.particle:nth-child(6) { left: 60%; animation-delay: 5s; }
-.particle:nth-child(7) { left: 70%; animation-delay: 2.5s; }
-.particle:nth-child(8) { left: 80%; animation-delay: 4.5s; }
-.particle:nth-child(9) { left: 90%; animation-delay: 1.5s; }
-.particle:nth-child(10) { left: 15%; animation-delay: 3.5s; }
-.particle:nth-child(11) { left: 25%; animation-delay: 0.5s; background: #E46BFF; box-shadow: 0 0 10px #E46BFF; }
-.particle:nth-child(12) { left: 35%; animation-delay: 2.8s; background: #E46BFF; box-shadow: 0 0 10px #E46BFF; }
-.particle:nth-child(13) { left: 45%; animation-delay: 4.2s; background: #E46BFF; box-shadow: 0 0 10px #E46BFF; }
-.particle:nth-child(14) { left: 55%; animation-delay: 1.8s; background: #E46BFF; box-shadow: 0 0 10px #E46BFF; }
-.particle:nth-child(15) { left: 65%; animation-delay: 3.2s; background: #C3B8FF; box-shadow: 0 0 10px #C3B8FF; }
-.particle:nth-child(16) { left: 75%; animation-delay: 5.5s; background: #C3B8FF; box-shadow: 0 0 10px #C3B8FF; }
-.particle:nth-child(17) { left: 85%; animation-delay: 2.2s; background: #C3B8FF; box-shadow: 0 0 10px #C3B8FF; }
-.particle:nth-child(18) { left: 95%; animation-delay: 4.8s; background: #C3B8FF; box-shadow: 0 0 10px #C3B8FF; }
-.particle:nth-child(19) { left: 12%; animation-delay: 1.2s; width: 6px; height: 6px; }
-.particle:nth-child(20) { left: 88%; animation-delay: 3.8s; width: 6px; height: 6px; }
-
-@keyframes particleFloat {
-  0% {
-    transform: translateY(100vh) scale(0);
-    opacity: 0;
-  }
-  10% {
-    opacity: 1;
-  }
-  90% {
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(-100px) scale(1);
-    opacity: 0;
-  }
-}
-
-/* Grid Background */
-.grid-background {
-  background-image: 
-    linear-gradient(rgba(107, 78, 255, 0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(107, 78, 255, 0.05) 1px, transparent 1px);
-  background-size: 50px 50px;
-  background-position: center center;
-  animation: grid-move 20s linear infinite;
-}
-
-@keyframes grid-move {
-  0% {
-    transform: translate(0, 0);
-  }
-  100% {
-    transform: translate(50px, 50px);
-  }
-}
-
-/* Floating Orbs */
-.floating-orb {
-  position: absolute;
-  animation: float 20s ease-in-out infinite;
-}
-
-.orb-1 {
-  top: 10%;
-  left: 10%;
-  animation-delay: 0s;
-}
-
-.orb-2 {
-  top: 60%;
-  right: 15%;
-  animation-delay: -7s;
-}
-
-.orb-3 {
-  bottom: 15%;
-  left: 20%;
-  animation-delay: -14s;
-}
-
-@keyframes float {
-  0%, 100% { 
-    transform: translate(0, 0) scale(1); 
-  }
-  33% { 
-    transform: translate(30px, -50px) scale(1.1); 
-  }
-  66% { 
-    transform: translate(-20px, 30px) scale(0.9); 
-  }
-}
-
-/* CTA Hover Effect with Dynamic Movement */
-.cta-hover-container {
-  transition: transform 0.3s ease;
-}
-
-.cta-image {
-  will-change: transform;
-}
-</style>
