@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+  <meta charset="UTF-8">
+  <title>Landify</title>
+  <script>
+    var path = location.pathname + location.search + location.hash;
+    var base = location.pathname.replace(/\/404\.html$/, '').replace(/\/[^/]*$/, '/');
+    sessionStorage.setItem('spa-redirect', path);
+    location.replace(base || '/');
+  </script>
+</head>
+<body></body>
+</html>
